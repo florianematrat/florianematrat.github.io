@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Premiers Pas – Floriane</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Premiers Pas</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 2rem;
-      color: #333;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.2em;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: normal;
-      color: #666;
-      margin-bottom: 1.5em;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 1rem;
-      color: white;
-      background-color: #007acc;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-
-    a.button:hover {
-      background-color: #005f99;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-    }
+    body { font-family: Arial, sans-serif; background:#f9f9f9; color:#333; margin:0; padding:0;}
+    header { background:#007acc; color:#fff; padding:2rem 1rem; text-align:center;}
+    header h1 { margin:0; font-size:2.5rem;}
+    main { padding:2rem 1rem; max-width:800px; margin:0 auto;}
+    section { margin-bottom:2rem;}
+    h2 { font-size:1.8rem; color:#007acc; margin-bottom:0.5rem;}
+    footer { background:#eee; padding:1rem; text-align:center; font-size:0.9rem;}
+    a.button { background:#007acc; color:#fff; padding:10px 20px; text-decoration:none; border-radius:5px;}
   </style>
 </head>
 <body>
-  <h1>Premiers Pas</h1>
-  <h2>La formation au service de l'insertion</h2>
-  <p>Floriane</p>
-  <a href="mailto:contact@premiers-pas.org" class="button">Contactez-moi</a>
+  <header>
+    <h1>Premiers Pas</h1>
+    <p>La formation au service de l’insertion</p>
+  </header>
+  <main>
+    <section>
+      <h2>Qui sommes‑nous ?</h2>
+      <p>« Premiers Pas » est une initiative d’insertion par la formation, basée à Marseille, engagée pour l’emploi et l'inclusion sociale.</p>
+    </section>
+    <section>
+      <h2>Missions</h2>
+      <ul>
+        <li>Former et accompagner des personnes en voie d’insertion</li>
+        <li>Organiser des ateliers et soutiens collectifs</li>
+        <li>Renforcer le lien social local</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p>Contactez-nous : <a href="mailto:contact@premiers-pas.org">contact@premiers‑pas.org</a></p>
+      <p><a class="button" href="mailto:contact@premiers-pas.org">Nous écrire</a></p>
+    </section>
+  </main>
+  <footer>
+    Siège social : Marseille<br>
+    &copy; 2025 – Premiers Pas – Tous droits réservés
+  </footer>
 </body>
 </html>
