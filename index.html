@@ -5,25 +5,82 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Premiers Pas</title>
   <style>
-    body { font-family: Arial, sans-serif; background:#f9f9f9; color:#333; margin:0; padding:0;}
-    header { background:#007acc; color:#fff; padding:2rem 1rem; text-align:center;}
-    header h1 { margin:0; font-size:2.5rem;}
-    main { padding:2rem 1rem; max-width:800px; margin:0 auto;}
-    section { margin-bottom:2rem;}
-    h2 { font-size:1.8rem; color:#007acc; margin-bottom:0.5rem;}
-    footer { background:#eee; padding:1rem; text-align:center; font-size:0.9rem;}
-    a.button { background:#007acc; color:#fff; padding:10px 20px; text-decoration:none; border-radius:5px;}
+    body { 
+      font-family: Arial, sans-serif; 
+      background:#f9f9f9; 
+      color:#333; 
+      margin:0; 
+      padding:0;
+    }
+
+    header { 
+      background:#007acc; 
+      color:#fff; 
+      padding:1rem 2rem; 
+      display: flex; 
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header img {
+      height: 60px;
+      filter: brightness(0) invert(1); /* logo noir → blanc */
+    }
+
+    header .header-text h1 { 
+      margin:0; 
+      font-size:2.5rem;
+    }
+
+    header .header-text p {
+      margin:0;
+    }
+
+    main { 
+      padding:2rem 1rem; 
+      max-width:800px; 
+      margin:0 auto;
+    }
+
+    section { 
+      margin-bottom:2rem;
+    }
+
+    h2 { 
+      font-size:1.8rem; 
+      color:#007acc; 
+      margin-bottom:0.5rem;
+    }
+
+    footer { 
+      background:#eee; 
+      padding:1rem; 
+      text-align:center; 
+      font-size:0.9rem;
+    }
+
+    a.button { 
+      background:#007acc; 
+      color:#fff; 
+      padding:10px 20px; 
+      text-decoration:none; 
+      border-radius:5px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Premiers Pas</h1>
-    <p>La formation au service de l’insertion</p>
+    <img src="assets/img/Premiers-Pas_logo.png" alt="Logo Premiers Pas">
+    <div class="header-text">
+      <h1>Premiers Pas</h1>
+      <p>La formation au service de l’insertion</p>
+    </div>
   </header>
+
   <main>
     <section>
-      <h2>Qui sommes‑nous ?</h2>
-      <p>« Premiers Pas » est une initiative d’insertion par la formation, basée à Marseille, engagée pour l’emploi et l'inclusion sociale.</p>
+      <h2>Qui sommes-nous ?</h2>
+      <p>« Premiers Pas » est une initiative d’insertion par la formation, basée à Marseille, engagée pour l’emploi et l'inclusion sociale.</p>
     </section>
     <section>
       <h2>Missions</h2>
@@ -35,10 +92,11 @@
     </section>
     <section>
       <h2>Contact</h2>
-      <p>Contactez-nous : <a href="mailto:contact@premiers-pas.org">contact@premiers‑pas.org</a></p>
+      <p>Contactez-nous : <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a></p>
       <p><a class="button" href="mailto:contact@premiers-pas.org">Nous écrire</a></p>
     </section>
   </main>
+
   <footer>
     Siège social : Marseille<br>
     &copy; 2025 – Premiers Pas – Tous droits réservés
