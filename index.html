@@ -13,37 +13,39 @@
       padding:0;
     }
 
+    /* HEADER : centré (logo + slogan) */
     header { 
       background:#007acc; 
       color:#fff; 
       padding:2rem 1rem; 
-      text-align: center; /* centre logo et slogan */
+      text-align:center;
     }
-
-    /* Logo centré et agrandi */
     header img {
-      height: 140px !important;
-      filter: brightness(0) invert(1) !important;
-      display: block;
-      margin: 0 auto;
+      height: 140px !important;          /* logo bien plus gros */
+      filter: brightness(0) invert(1) !important; /* noir -> blanc */
+      display:block;
+      margin:0 auto;
     }
-
-    /* Slogan */
     header p {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
+      margin-top:0.5rem;
+      font-size:0.9rem;
     }
 
-    main { 
+    /* CONTENU : zone centrée MAIS texte aligné à gauche */
+    main {
       padding:2rem 1rem; 
       max-width:800px; 
-      margin:0 auto; /* centre la zone */
-      text-align: left; /* texte aligné à gauche */
+      margin:0 auto;                 /* centre la zone */
+      text-align:left !important;    /* aligne le texte à gauche */
+    }
+    /* On force aussi les éléments internes au cas où un style précédent persiste */
+    main section,
+    main h1, main h2, main h3, main h4, main h5, main h6,
+    main p, main ul, main ol, main li, main a, main div {
+      text-align:left !important;
     }
 
-    section { 
-      margin-bottom:2rem;
-    }
+    section { margin-bottom:2rem; }
 
     h2 { 
       font-size:1.8rem; 
@@ -64,6 +66,7 @@
       padding:10px 20px; 
       text-decoration:none; 
       border-radius:5px;
+      display:inline-block;
     }
   </style>
 </head>
@@ -78,6 +81,7 @@
       <h2>Qui sommes-nous ?</h2>
       <p>« Premiers Pas » est une initiative d’insertion par la formation, basée à Marseille, engagée pour l’emploi et l'inclusion sociale.</p>
     </section>
+
     <section>
       <h2>Missions</h2>
       <ul>
@@ -86,6 +90,7 @@
         <li>Renforcer le lien social local</li>
       </ul>
     </section>
+
     <section>
       <h2>Contact</h2>
       <p>Contactez-nous : <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a></p>
