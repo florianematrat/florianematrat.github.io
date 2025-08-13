@@ -22,21 +22,29 @@
       gap: 1rem;
     }
 
-    /* Logo : noir → blanc */
+    /* Logo : plus grand + noir → blanc */
     header img {
-  height: 90px; /* Logo plus grand */
-  filter: brightness(0) invert(1);
-}
+      height: 90px !important; /* taille augmentée */
+      filter: brightness(0) invert(1) !important;
+    }
 
-header .header-text h1 { 
-  margin:0; 
-  font-size:2rem; /* Titre plus petit qu'avant */
-}
+    /* Titre plus petit */
+    header .header-text h1 { 
+      margin:0; 
+      font-size: 2rem !important;
+    }
 
-header .header-text p {
-  margin:0;
-  font-size:1rem; /* Slogan proportionnellement plus petit aussi */
-}
+    /* Slogan plus petit proportionnellement */
+    header .header-text p {
+      margin:0;
+      font-size: 1rem !important;
+    }
+
+    main { 
+      padding:2rem 1rem; 
+      max-width:800px; 
+      margin:0 auto;
+    }
 
     section { 
       margin-bottom:2rem;
@@ -99,4 +107,3 @@ header .header-text p {
   </footer>
 </body>
 </html>
-
