@@ -17,34 +17,28 @@
       background:#007acc; 
       color:#fff; 
       padding:1rem 2rem; 
-      display: flex; 
-      align-items: center;
-      gap: 1rem;
+      text-align: center; /* centre le contenu du header */
     }
 
-    /* Logo : encore plus grand */
+    /* Logo encore plus grand et blanc */
     header img {
-      height: 110px !important;
+      height: 140px !important;
       filter: brightness(0) invert(1) !important;
+      display: block;
+      margin: 0 auto;
     }
 
-    /* Titre encore plus petit */
-    header .header-text h1 { 
-      margin:0; 
-      font-size: 1.8rem !important;
-    }
-
-    /* Slogan encore plus petit mais proportionnel */
-    header .header-text p {
-      margin:0;
-      font-size: 0.9rem !important;
+    /* Slogan sous le logo */
+    header p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
     }
 
     main { 
       padding:2rem 1rem; 
       max-width:800px; 
       margin:0 auto;
-      text-align: center; /* recentre tout le contenu principal */
+      text-align: center; /* centre le contenu */
     }
 
     section { 
@@ -76,10 +70,7 @@
 <body>
   <header>
     <img src="assets/img/Premiers-Pas_logo.png" alt="Logo Premiers Pas">
-    <div class="header-text">
-      <h1>Premiers Pas</h1>
-      <p>La formation au service de l’insertion</p>
-    </div>
+    <p>La formation au service de l’insertion</p>
   </header>
 
   <main>
