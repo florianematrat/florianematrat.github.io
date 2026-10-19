@@ -101,12 +101,61 @@
       text-align: center; /* centre texte et bouton */
     }
 
-    /* Pied de page */
+      /* Pied de page */
     footer {
-      background: #eee;
-      padding: 1rem;
+      background: #FAF7F2;
+      border-top: 4px solid #47A282;
+      color: #444;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      padding: 2.5rem 1.25rem 1.5rem;
+      margin-top: 3rem;
+    }
+    .footer-inner { max-width: 920px; margin: 0 auto; }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .footer-titre {
+      color: #47A282;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.6rem;
+    }
+    footer p { margin: 0 0 0.5rem; }
+    footer a { color: #47A282; }
+    .footer-declaration {
+      border-left: 3px solid #47A282;
+      padding-left: 0.8rem;
+      font-style: italic;
+      color: #555;
+    }
+    footer details {
+      border-top: 1px solid #e3ddd2;
+      padding: 0.8rem 0;
+    }
+    footer summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #333;
+      list-style: none;
+    }
+    footer summary::-webkit-details-marker { display: none; }
+    footer summary::before { content: "+ "; color: #47A282; }
+    footer details[open] summary::before { content: "– "; }
+    footer details > div { padding-top: 0.6rem; color: #555; }
+    footer details ul { margin: 0; padding-left: 1.2rem; }
+    footer details li { margin-bottom: 0.4rem; }
+    .footer-copyright {
+      border-top: 1px solid #e3ddd2;
+      padding-top: 1rem;
       text-align: center;
-      font-size: 0.95rem;
+      font-size: 0.8rem;
+      color: #777;
     }
 
     /* Bouton */
@@ -156,6 +205,10 @@
 
 <h3><p><strong>Documents utiles</strong></p></h3>
     <p><a href="assets/pdf/Règlement-intérieur_PP.pdf" target="_blank">Règlement intérieur (PDF)</a></p>
+
+    <p>Une réclamation ?</p>
+<p>Stagiaire, employeur, financeur ou partenaire : vous pouvez nous adresser toute réclamation par email à <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a> ou par courrier au siège de l'association.</p>
+<p>Nous accusons réception sous 7 jours et vous apportons une réponse sous 30 jours. Chaque réclamation est enregistrée et nous aide à améliorer nos formations.</p>
     
     <section class="contact">
       <h2>Contact</h2>
@@ -165,8 +218,45 @@
   </main>
 
   <footer>
-    Siège social : Marseille<br>
-    &copy; 2025 – Premiers Pas – Tous droits réservés
+    <div class="footer-inner">
+
+      <div class="footer-cols">
+        <div>
+          <p class="footer-titre">Premiers Pas</p>
+          <p>Association loi 1901</p>
+          <p>Maison des associations – Antenne Waldeck Rousseau, Btl 53<br>
+             161 bis avenue Roger Salengro<br>
+             13002 Marseille</p>
+          <p><a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a></p>
+        </div>
+
+        <div>
+          <p class="footer-titre">Organisme de formation</p>
+          <p class="footer-declaration">Déclaration d'activité enregistrée sous le numéro 93132498613 auprès du préfet de la région Provence-Alpes-Côte d'Azur. Cet enregistrement ne vaut pas agrément de l'État.</p>
+        </div>
+      </div>
+
+      <details>
+        <summary>Mentions légales</summary>
+        <div>
+          <ul>
+            <li><strong>Éditeur :</strong> Association Premiers-Pas, association loi 1901. Siège : Maison des associations Antenne Waldeck Rousseau Btl 53, 161 bis avenue Roger Salengro, 13002 Marseille. RNA : W133042244. SIRET : 102 616 018 00028. Contact : <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a>.</li>
+            <li><strong>Directrice de la publication :</strong> Aurélie Matrat, présidente.</li>
+            <li><strong>Hébergeur :</strong> GitHub Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Données personnelles (RGPD)</summary>
+        <div>
+          <p>Les informations que vous nous transmettez par email ou par formulaire servent uniquement à répondre à votre demande et à organiser votre formation. Elles ne sont ni vendues ni cédées. Elles sont conservées pendant la durée nécessaire au suivi de votre demande et aux obligations légales de l'organisme de formation. Le formulaire d'inscription aux réunions d'information est hébergé par Google. Vous pouvez demander à consulter, corriger ou supprimer vos données en écrivant à <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a>.</p>
+        </div>
+      </details>
+
+      <p class="footer-copyright">© 2026 – Premiers Pas – Tous droits réservés</p>
+
+    </div>
   </footer>
 </body>
 </html>
