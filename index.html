@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Premiers Pas</title>
+  <title>Premiers-Pas – Organisme de formation à Marseille</title>
 
   <!-- Import de la police Open Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -12,32 +12,45 @@
     /* Base */
     body {
       font-family: 'Open Sans', sans-serif;
-      background: #FFFFFF;   /* beige du bandeau, fond global */
+      background: #FFFFFF;
       color: #333;
       margin: 0;
       padding: 0;
       font-size: 16px;
       line-height: 1.75;
     }
-  main {
-    background: #FFFFFF;  /* fond du texte */
-}
+    html { scroll-behavior: smooth; }
 
-    /* HEADER : logo centré seul */
+    /* HEADER : logo centré + menu simple */
     header {
       background: #FAF7F2;
       color: #fff;
-      padding: 0.5rem 1rem; /* header un peu plus grand */
+      padding: 0.5rem 1rem;
       text-align: center;
     }
     header img {
-      height: 150px; /* logo plus petit */
+      height: 150px;
       display: block;
       margin: 0 auto;
     }
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem 1.5rem;
+      padding: 0.25rem 0 0.5rem;
+    }
+    header nav a {
+      color: #47A282;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    header nav a:hover { text-decoration: underline; }
 
-    /* CONTENU : zone centrée, texte aligné à gauche */
+    /* CONTENU : zone centrée */
     main {
+      background: #FFFFFF;
       max-width: 920px;
       margin: 0 auto;
       padding: 2rem 1.25rem;
@@ -46,62 +59,76 @@
     main p {
       margin: 0 0 1.1rem;
     }
-    main ul {
+    main ul, main ol {
       margin: 0 0 1.1rem 1.25rem;
     }
     main li {
       margin: 0.35rem 0;
     }
+    main a { color: #47A282; }
 
     /* Titres */
     h2:first-of-type {
-    margin-top: 1.5rem;
+      margin-top: 1.5rem;
     }
-
-    
     h2 {
       font-weight: 700;
       color: #47A282;
       font-size: 1.5rem;
       line-height: 1.3;
       margin: 4rem 0 1.2rem;
-
+      scroll-margin-top: 1rem;
     }
-
-  h3 {
-    font-size: 1.2rem;
-    color: #000000;
-    font-weight: 600;
-    margin: 0 0 1.5rem;
+    h3 {
+      font-size: 1.2rem;
+      color: #000000;
+      font-weight: 600;
+      margin: 0 0 1.5rem;
     }
-
     h4 {
-  font-size: 1rem;
-  color: #000000;
-  font-weight: 600;
-  font-style: italic;
-  margin: 1.2rem 0 0.6rem;
-  }
+      font-size: 1rem;
+      color: #000000;
+      font-weight: 600;
+      font-style: italic;
+      margin: 1.2rem 0 0.6rem;
+    }
 
     .puces-noires {
-  list-style-type: disc;
-  padding-left: 1.2rem;
-  }
-
-.puces-noires li::marker {
-  color: #000000;
-}
-    
-    /* Espaces spécifiques avant certaines sections */
-    section.offre-formation {
-      margin-top: 3rem; /* plus grand espace avant L’offre de formation */
+      list-style-type: disc;
+      padding-left: 1.2rem;
     }
+    .puces-noires li::marker {
+      color: #000000;
+    }
+
+    /* Formations */
+    .formation + .formation {
+      border-top: 1px solid #e3ddd2;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+    }
+    .sous-titre {
+      font-style: italic;
+      margin-top: -1rem;
+    }
+    .note {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Contact */
     section.contact {
-      margin-top: 3rem; /* plus grand espace avant Contact */
-      text-align: center; /* centre texte et bouton */
+      margin-top: 3rem;
+      text-align: center;
+    }
+    section.contact ul {
+      list-style: none;
+      margin: 0 0 1.1rem;
+      padding: 0;
     }
 
-      /* Pied de page */
+    /* Pied de page */
     footer {
       background: #FAF7F2;
       border-top: 4px solid #47A282;
@@ -172,48 +199,104 @@
 </head>
 <body>
   <header>
-    <img src="assets/img/Premiers-Pas_logo.png" alt="Logo Premiers Pas">
+    <img src="assets/img/Premiers-Pas_logo.png" alt="Logo Premiers-Pas">
+    <nav aria-label="Menu principal">
+      <a href="#qui-sommes-nous">Qui sommes-nous</a>
+      <a href="#nos-formations">Nos formations</a>
+      <a href="#infos-pratiques">Infos pratiques</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-      <h2>QUI SOMMES-NOUS ?</h2>
-        <h3><p><strong>Premiers Pas – la formation au service de l’insertion</strong></p></h3>
-          <p>Premiers-Pas est une association loi 1901 basée à Marseille, déclarée comme organisme de formation. Nous accompagnons les salariés en chantier d'insertion dans la construction de leur projet professionnel. Leurs contrats étant limités dans le temps, nous les aidons à sécuriser leur sortie vers un emploi durable grâce à des formations concrètes et adaptées.</p>
-  
-      <h2>L’OFFRE DE FORMATION</h2>
-          <h3>Premiers pas avec mon GPS, se déplacer en autonomie avec son smartphone</h3>
-          <p>Savoir se rendre seul et à l'heure sur un lieu de travail ou à un rendez-vous : une compétence indispensable dans de nombreux métiers, comme l'aide à domicile, la maintenance ou la livraison</p>
-            <p> A l'issue de la formation, le participant sera capable d'activer la localisation, calculer un itinéraire, prévoir son heure de départ, utiliser le guidage de son smartphone et trouver son chemin. </p>
 
-            <p><a href="assets/pdf/Fiche-programme_GPS.pdf" target="_blank">Télécharger la fiche programme (PDF)</a></p>
-    
-          <h3>Nos résultats</h3>
-            <p> Première session en Octobre 2026. Les résultats seront publiés à l'issue de la formation.</p> 
+    <!-- QUI SOMMES-NOUS -->
+    <h2 id="qui-sommes-nous">QUI SOMMES-NOUS ?</h2>
+    <h3>Premiers-Pas – la formation au service de l’insertion</h3>
+    <p>Premiers-Pas est une association loi 1901 basée à Marseille, déclarée comme organisme de formation.</p>
+    <p>Nous intervenons auprès des structures de l'insertion, de l'accompagnement social et de l'emploi (chantiers d'insertion, associations, employeurs) et des personnes qu'elles accompagnent. Notre objectif : aider chacun à construire son projet professionnel et à sécuriser son parcours vers un emploi durable, grâce à des formations concrètes et adaptées à la réalité de leurs publics.</p>
 
+    <!-- NOS FORMATIONS -->
+    <h2 id="nos-formations">NOS FORMATIONS</h2>
 
-     <h2>INFOS PRATIQUES</h2>
-        <h3><p><strong>S'inscrire</strong></p></h3>
-    <ol>
-  <li>Contactez-nous par email ou par téléphone.</li>
-  <li>Nous échangeons sur votre besoin et réalisons un questionnaire de positionnement.</li>
-  <li>Nous vous proposons un programme adapté et signons ensemble une convention de formation.</li>
-  <li>Chaque participant reçoit une convocation avec la date, les horaires, le lieu et les informations pratiques.</li>
-</ol>
+    <!-- Formation GPS -->
+    <div class="formation">
+      <h3>Premiers pas avec mon GPS</h3>
+      <p class="sous-titre">Se déplacer en autonomie avec son smartphone</p>
+      <p>Savoir se rendre seul et à l'heure sur un lieu de travail ou à un rendez-vous : une compétence attendue dans l'aide à domicile, la maintenance ou la livraison.</p>
+      <p><strong>Objectifs</strong> : activer la localisation, rechercher une adresse, calculer un itinéraire à pied et en transports en commun, prévoir son heure de départ, suivre le guidage et retrouver son chemin.</p>
 
-       <h3><p><strong>Financement</strong></p></h3>
-      <p>Nos formations peuvent être financées par l'OPCO de l'employeur ou directement par l'employeur. Certaines formations courtes sont proposées gratuitement. Contactez-nous pour étudier votre situation.</p>
+      <ul class="puces-noires">
+        <li><strong>Pour qui</strong> : formation réservée aux structures (chantiers d'insertion, associations, employeurs), organisée pour leurs salariés. Pas d'inscription individuelle.</li>
+        <li><strong>Prérequis</strong> : savoir allumer et déverrouiller son smartphone et comprendre des consignes orales simples en français. Aucun niveau de lecture ni de bagage informatique n'est exigé.</li>
+        <li><strong>Durée</strong> : 3 heures, en une séance.</li>
+        <li><strong>Modalité</strong> : en présentiel, dans les locaux de la structure, de 2 à 8 participants.</li>
+        <li><strong>Évaluation</strong> : exercice individuel en fin de formation, sur une grille reprenant les objectifs. Une attestation de fin de formation est remise à chaque participant.</li>
+        <li><strong>Tarif</strong> : à partir de 156 € par session (2 à 8 participants), sur devis selon le nombre de participants et le lieu. TVA non applicable – article 293 B du CGI.</li>
+      </ul>
 
-<h3><p><strong>Documents utiles</strong></p></h3>
-    <p><a href="assets/pdf/Règlement-intérieur_PP.pdf" target="_blank">Règlement intérieur (PDF)</a></p>
+      <h4>S'inscrire</h4>
+      <ol>
+        <li>La structure nous contacte par email ou par téléphone.</li>
+        <li>Nous échangeons sur ses besoins, puis chaque salarié répond à un questionnaire de positionnement.</li>
+        <li>Nous proposons un programme adapté et signons une convention de formation.</li>
+        <li>Chaque participant reçoit une convocation précisant la date, les horaires, le lieu et les informations pratiques.</li>
+      </ol>
+      <p><strong>Délais d'accès</strong> : inscription au moins 2 jours avant la séance ; session organisée dans la semaine qui suit la demande.</p>
+      <p><strong>Financement</strong> : la formation est financée par la structure employeuse. Contactez-nous pour étudier votre situation.</p>
 
-    <h3><p><strong>Une réclamation ?</strong></p></h3>
-<p>Stagiaire, employeur, financeur ou partenaire : vous pouvez nous adresser toute réclamation par email à <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a> ou par courrier au siège de l'association.</p>
-<p>Nous accusons réception sous 7 jours et vous apportons une réponse sous 30 jours. Chaque réclamation est enregistrée et nous aide à améliorer nos formations.</p>
-    
+      <h4>Nos résultats – session du 26 octobre 2026</h4>
+      <ul class="puces-noires">
+        <li>Participants : 4 personnes formées</li>
+        <li>Taux de réussite : 100 % (4 participants sur 4 ont atteint les objectifs)</li>
+        <li>Taux de satisfaction : 100 % (4 participants sur 4 ont jugé la formation « très bien »)</li>
+      </ul>
+      <p class="note">Méthode de calcul : le taux de réussite rapporte le nombre de participants ayant réussi au moins 5 critères sur 6 lors de l'évaluation finale au nombre de participants présents. Le taux de satisfaction est calculé à partir du questionnaire remis en fin de formation. Résultats mis à jour le 30/10/2026.</p>
+
+      <p><a class="button" href="assets/pdf/Fiche-programme_GPS.pdf" target="_blank" rel="noopener">Télécharger la fiche programme (PDF)</a></p>
+    </div>
+
+    <!-- Formation ADVF -->
+    <div class="formation">
+      <h3>Assistant·e de vie aux familles (ADVF)</h3>
+      <p class="sous-titre">Prochainement – première session prévue à partir de janvier 2027</p>
+      <p>Préparation au titre professionnel Assistant·e de vie aux familles, pour accompagner au quotidien des enfants, des familles, des personnes âgées ou en situation de handicap.</p>
+      <ul class="puces-noires">
+        <li><strong>Public</strong> : personnes souhaitant se former au métier d'assistant·e de vie.</li>
+        <li><strong>Rythme prévu</strong> : 6 heures par semaine, de janvier à juillet 2027.</li>
+      </ul>
+      <p>Programme détaillé, modalités d'inscription, financement et tarif : bientôt disponibles.</p>
+      <p><strong>Nos résultats</strong> : première session en 2027 ; les résultats seront publiés à l'issue de la formation.</p>
+      <p>Vous êtes intéressé·e ? <a href="#contact">Contactez-nous</a> pour être informé·e de l'ouverture des inscriptions.</p>
+    </div>
+
+    <!-- INFOS PRATIQUES -->
+    <h2 id="infos-pratiques">INFOS PRATIQUES</h2>
+
+    <h3>Accessibilité et handicap</h3>
+    <p>Nos formations sont accessibles aux personnes en situation de handicap. Les besoins (rythme, supports, matériel, accès au lieu) sont étudiés avant l'inscription avec notre référente handicap. Si une adaptation n'est pas possible, nous orientons la personne vers un partenaire spécialisé.</p>
+    <p>Référente handicap : Floriane Matrat – <a href="tel:+33699735441">06 99 73 54 41</a> – <a href="mailto:floriane.matrat@premiers-pas.org">floriane.matrat@premiers-pas.org</a></p>
+
+    <h3>Une remarque ou une réclamation ?</h3>
+    <p>Écrivez-nous à <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a></p>
+
+    <h3>Documents utiles</h3>
+    <ul class="puces-noires">
+      <li><a href="assets/pdf/Règlement-intérieur_PP.pdf" target="_blank" rel="noopener">Règlement intérieur (PDF)</a></li>
+    </ul>
+
+    <!-- CONTACT -->
     <section class="contact">
-      <h2>Contact</h2>
-      <p>Contactez-nous : <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a></p>
+      <h2 id="contact">CONTACT</h2>
+      <p>Une question, un projet de formation pour vos salariés ?</p>
+      <ul>
+        <li>Email : <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a></li>
+        <li>Téléphone : <a href="tel:+33699735441">06 99 73 54 41</a></li>
+      </ul>
       <p><a class="button" href="mailto:contact@premiers-pas.org">Nous écrire</a></p>
+      <p><strong>Association Premiers-Pas</strong><br>
+         Maison des associations – Antenne Waldeck Rousseau, Btl 53<br>
+         161 bis avenue Roger Salengro, 13002 Marseille</p>
     </section>
   </main>
 
@@ -222,12 +305,13 @@
 
       <div class="footer-cols">
         <div>
-          <p class="footer-titre">Premiers Pas</p>
+          <p class="footer-titre">Premiers-Pas</p>
           <p>Association loi 1901</p>
           <p>Maison des associations – Antenne Waldeck Rousseau, Btl 53<br>
              161 bis avenue Roger Salengro<br>
              13002 Marseille</p>
-          <p><a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a></p>
+          <p><a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a><br>
+             <a href="tel:+33699735441">06 99 73 54 41</a></p>
         </div>
 
         <div>
@@ -240,7 +324,10 @@
         <summary>Mentions légales</summary>
         <div>
           <ul>
-            <li><strong>Éditeur :</strong> Association Premiers-Pas, association loi 1901. Siège : Maison des associations Antenne Waldeck Rousseau Btl 53, 161 bis avenue Roger Salengro, 13002 Marseille. RNA : W133042244. SIRET : 102 616 018 00028. Contact : <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a>.</li>
+            <li><strong>Éditeur :</strong> Association Premiers-Pas, association loi 1901.</li>
+            <li><strong>Siège :</strong> Maison des associations – Antenne Waldeck Rousseau, Btl 53, 161 bis avenue Roger Salengro, 13002 Marseille.</li>
+            <li><strong>RNA :</strong> W133042244 – <strong>SIRET :</strong> 102 616 018 00028.</li>
+            <li><strong>Contact :</strong> <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a>.</li>
             <li><strong>Directrice de la publication :</strong> Aurélie Matrat, présidente.</li>
             <li><strong>Hébergeur :</strong> GitHub Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</li>
           </ul>
@@ -250,32 +337,16 @@
       <details>
         <summary>Données personnelles (RGPD)</summary>
         <div>
-          <p>Les informations que vous nous transmettez par email ou par formulaire servent uniquement à répondre à votre demande et à organiser votre formation. Elles ne sont ni vendues ni cédées. Elles sont conservées pendant la durée nécessaire au suivi de votre demande et aux obligations légales de l'organisme de formation. Le formulaire d'inscription aux réunions d'information est hébergé par Google. Vous pouvez demander à consulter, corriger ou supprimer vos données en écrivant à <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a>.</p>
+          <p>Les informations que vous nous transmettez par email ou par téléphone servent uniquement à traiter votre demande et à organiser la formation. Elles ne sont ni vendues ni cédées. Elles sont conservées le temps nécessaire au suivi de votre demande et au respect des obligations légales de l'organisme de formation. Pour consulter, corriger ou supprimer vos données : <a href="mailto:contact@premiers-pas.org">contact@premiers-pas.org</a>.</p>
         </div>
       </details>
 
-      <p class="footer-copyright">© 2026 – Premiers Pas – Tous droits réservés</p>
+      <p class="footer-copyright">Informations mises à jour le 30/10/2026 – © 2026 Premiers-Pas</p>
 
     </div>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
